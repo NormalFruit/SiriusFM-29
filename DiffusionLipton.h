@@ -2,7 +2,7 @@
 #include <stdexcept>
 
 namespace SiriusFM {
-	class DiffusionGBM {
+	class DiffusionLipton {
 	private:
     		double const m_mu;
     		double const m_sigma;
@@ -14,7 +14,7 @@ namespace SiriusFM {
             		if (a_s < 0) return 0.0;
             		return m_mu * a_s
         	}
-    		DiffusionBGM(double a_mu, double a_sigma)
+    		DiffusionLipton(double a_mu, double a_sigma)
     		:m_mu(a_mu);
      		 m_sigma(a_sigma);
      		 {

@@ -2,9 +2,10 @@
 #include <stdexcept>
 
 namespace SiriusFM {
-	class DiffusionGBM {
+	class DiffusionOU {
 	private:
-    		double const m_mu;
+    		double const m_cappa;
+    		double const m_theta;
     		double const m_sigma;
     	public:
         	double mu(double a_s, double a_t) {
@@ -14,7 +15,7 @@ namespace SiriusFM {
             		if (a_s < 0) return 0.0;
             		return m_mu * a_s
         	}
-    		DiffusionBGM(double a_mu, double a_sigma)
+    		DiffusionOU(double a_mu, double a_sigma)
     		:m_mu(a_mu);
      		 m_sigma(a_sigma);
      		 {
