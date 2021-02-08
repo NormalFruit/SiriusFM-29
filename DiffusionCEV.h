@@ -9,20 +9,20 @@ namespace SiriusFM {
     		double const m_beta;    		
     		
     	public:
-        	double mu(double a_s, double a_t) const {
+        	double mu(double a_s, double a_t) {
         		return m_mu * a_s
         	}
-        	double sigma(double a_s, double a_t) const {
+        	double sigma(double a_s, double a_t) {
             		if (a_s < 0) return 0.0;
-            		return m_mu * a_s
+            		return m_sigma * std::pow(a_s, m_beta);
         	}
     		DiffusionCEV(double a_mu, double a_sigma, double a_beta)
-    		:m_mu(a_mu),
-     		 m_sigma(a_sigma),
-     		 m_beta(a_beta)
-     		 {
-     		 if (m_sigma <= 0) throw std::invalid_argument('...')
-     		 }
+    		:m_mu(a_mu)
+     		 m_sigma(a_sigma)
+     		 m_beta(a_beta) {
+     			if (m_sigma <= 0) throw std::invalid_argument('...');
+     			if (m_beta < 0) throw std::invalid_argument('...');
+     		}
      
     	};
 }
