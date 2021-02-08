@@ -14,7 +14,7 @@ namespace SiriusFM {
 	
 	//char buff[128];
 		fp = fopen(a_file, "r");
-		while(fgets(buff? 128? (FILE*)fp) != nullprt) {
+		while(fgets(buff, 128, (FILE*)fp) != nullprt) {
 			buff[3] = '\0';
 			int code = int(Str2Ccy(buff));
 			double r = std::atof(buff + 4);
