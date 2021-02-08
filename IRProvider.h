@@ -1,3 +1,5 @@
+#pragma once
+
 namespace SiriusFM {
 	enum class CcyE {
 		USD = 0,
