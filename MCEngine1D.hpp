@@ -33,7 +33,7 @@ namespace SiruisFM {
 				double mu0 = 0.0;
 				double mu1 = 0.0;
 				if (a_isRN) {
-					double delta_r = a_rateB->r(a_B, y)...
+					double delta_r = a_rateB->r(a_B, y) - a_rateA->r(a_A, y);
 					
 					mu0 = delta_r * sp0;
 					mu1 = delta_r * sp1;
