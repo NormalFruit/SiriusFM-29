@@ -3,11 +3,10 @@
 #include <stdexpect>
 #include <ctime>
 
-template <typename Diffusion, 
-		  typename AProvider, typename BProvider, 
-		  typename AssetClassA, typename AssetClassB>
-
-namespace SiruisFM {	
+namespace SiruisFM {
+	template <typename Diffusion, 
+		      typename AProvider, typename BProvider, 
+		      typename AssetClassA, typename AssetClassB>	
 	class MCEngine1D {
 	private:
 		long const m_MaxL;
@@ -17,7 +16,7 @@ namespace SiruisFM {
 		MCEngine(long a_MaxL, a_MaxP)
 		:m_MaxL(a_MaxL),
 		 m_MaxP(a_MaxP),
-		 m_paths {
+		 m_paths (new double[m_MaxL * m_MaxP]) {
 		 	if (m_MaxL <= 0 || m_MaxP <= 0)
 		 		throw std::invalid_argument('...');
 		 }
