@@ -5,7 +5,7 @@ SOURCES = main IRProviderConst
 EXTLIBS =
 
 CXXFLAGS += -fPIC
-CXXFLAGS += -std=c++11
+CXXFLAGS += -std=c++17
 CXXFLAGS += -O0 -g
 
 LDFLAGS += -fPIC
